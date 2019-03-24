@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{% include 'files_list.html' %}
+
+    <h1 class="row justify-content-center text-primary" >Preview</h1>
+    <div id="file_list-col" class="col-lg-6">
+        <div class="card mb-4">
+          <div class="card-body">
+              {% ifequal file_to_preview "yes" %}
+                <p>Hay contenido</p>
+              {% else %}
+                <p>No hay contenido</p>
+              {% endifequal %}
+          </div>
+        </div>
+     </div>
+
+
+{% endblock %}
+
